@@ -1,5 +1,6 @@
 package com.jyotirani.android.findmyage
 
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         messageTextView.setText("You are ${CURRENT_YEAR - BIRTH_YEAR} years old.")
       } else if (BIRTH_YEAR == CURRENT_YEAR) {
         messageTextView.setText("You are less than 1 year.")
+        messageTextView.setTextColor(Color.GREEN)
       } else {
         Toast.makeText(this,"You have not born yet Brother!",Toast.LENGTH_SHORT).show()
       }
